@@ -1,0 +1,52 @@
+{
+    "name": "ControllerInput",
+    "maps": [
+        {
+            "name": "XboxController",
+            "id": "7fbdbb53-fa43-4593-8aba-c4e457c3740d",
+            "actions": [
+                {
+                    "name": "LJoy",
+                    "type": "Value",
+                    "id": "0b0102cf-3d7b-4eb4-8be1-06f82193c6da",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "b26c687e-839b-44d4-bcd0-4838afc6f0db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2c9eb55c-b385-4991-bc6d-ef93364d818c",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LJoy",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3a07274-66a2-413c-9aca-7210813e136d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
