@@ -7,6 +7,8 @@ public class Jump : MonoBehaviour
     public int playerNumber;
     public GameObject sikte;
     public float jumpSpeed = 10f;
+    public float raycastStartOffset = 0.55f;
+    public float raycastLength = 0.2f;
 
     private string jumpButton;
     private float distToGround;
@@ -46,15 +48,19 @@ public class Jump : MonoBehaviour
             }
         }
 
-        Debug.DrawRay(transform.position, -Vector2.up * distToGround, Color.green);
+        //Debug.DrawRay(transform.position, -Vector2.up * distToGround, Color.green);
+        Debug.DrawRay(transform.position + new Vector3(0, -raycastStartOffset, 0), -Vector2.up * raycastLength, Color.yellow);
         //Debug.Log(canDoublejump);
 
         if (Input.GetAxisRaw(jumpButton) < 0.5f) {
             canJump = true;
         }
+
     }
 
+    // Ground Check
     private bool IsGrounded() {
-        return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + 0.1f);
+        //return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + 0.1f);
+        return Physics2D.Raycast(transform.position + new Vector3(0, -raycastStartOffset, 0), -Vector2.up, raycastLength);
     }
 }
