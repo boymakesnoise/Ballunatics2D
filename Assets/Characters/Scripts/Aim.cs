@@ -39,5 +39,6 @@ public class Aim : MonoBehaviour
         }
 
         transform.position = pappa.transform.position;
+
     }
 }
