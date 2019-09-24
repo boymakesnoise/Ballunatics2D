@@ -37,17 +37,31 @@ public class Jump : MonoBehaviour
 
     private void Update() {
 
+        // Jump
         if (Input.GetAxisRaw(jumpButton) >= 0.5f && canJump) {
             m_NewForce = sikte.transform.right;
-            if (IsGrounded()) {
-                canJump = false;
-                m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
-                m_Rigidbody.AddForce(m_NewForce * jumpSpeed, ForceMode2D.Impulse);
-                canDoublejump = true;
-            }
+            //if (IsGrounded() || IsWalledLeft() || IsWalledRight()) {
+                if (IsWalledLeft()) {
+                    m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
+                    m_Rigidbody.AddForce(new Vector2(1,1) * jumpSpeed/2, ForceMode2D.Impulse);
+                    canJump = false;
+                }
+                if (IsWalledRight()) {
+                    m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
+                    m_Rigidbody.AddForce(new Vector2(-1, 1) * jumpSpeed/2, ForceMode2D.Impulse);
+                    canJump = false;
+                }
+                if (IsGrounded()) {
+                    canJump = false;
+                    //m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
+                    m_Rigidbody.AddForce(m_NewForce * jumpSpeed, ForceMode2D.Impulse);
+                    canDoublejump = true;
+                }
+                
+            //}
             else {
                 if (canDoublejump) {
-                    m_Rigidbody.velocity = new Vector2(0, 0);
+                    //m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
                     m_Rigidbody.AddForce(m_NewForce * jumpSpeed, ForceMode2D.Impulse);
                     canDoublejump = false;
                 }
@@ -56,6 +70,8 @@ public class Jump : MonoBehaviour
 
         //Debug.DrawRay(transform.position, -Vector2.up * distToGround, Color.green);
         Debug.DrawRay(transform.position + new Vector3(0, -raycastStartOffset, 0), -Vector2.up * raycastLength, Color.yellow);
+        Debug.DrawRay(transform.position + new Vector3(raycastStartOffset, 0, 0), Vector2.right * raycastLength, Color.red);
+        Debug.DrawRay(transform.position + new Vector3(-raycastStartOffset, 0, 0), -Vector2.right * raycastLength, Color.blue);
         //Debug.Log(canDoublejump);
 
         if (Input.GetAxisRaw(jumpButton) < 0.5f) {
@@ -67,12 +83,19 @@ public class Jump : MonoBehaviour
             var h = Input.GetAxis(xAim);
             m_Rigidbody.AddForce(new Vector2(h * scootchForce, 0));
         }
-
     }
 
     // Ground Check
     private bool IsGrounded() {
         //return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + 0.1f);
         return Physics2D.Raycast(transform.position + new Vector3(0, -raycastStartOffset, 0), -Vector2.up, raycastLength);
+    }
+
+    // Wall checks
+    private bool IsWalledRight() {
+        return Physics2D.Raycast(transform.position + new Vector3(raycastStartOffset, 0, 0), Vector2.right, raycastLength);
+    }
+    private bool IsWalledLeft() {
+        return Physics2D.Raycast(transform.position + new Vector3(-raycastStartOffset, 0, 0), -Vector2.right, raycastLength);
     }
 }
