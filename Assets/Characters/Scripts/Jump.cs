@@ -46,6 +46,7 @@ public class Jump : MonoBehaviour
                 canJump = false;
                 jumps--;
                 canLand = true;
+
                 if (!IsGrounded()) {
                     m_Rigidbody.velocity = new Vector2(0, 0); //NOLLSTÄLLER HASTIGHET
                 }
