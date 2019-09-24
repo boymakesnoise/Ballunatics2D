@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class Killed : MonoBehaviour
 {
-    //private GameObject pil;
-    //private Jump jumpScript;
+    public GameObject pil;
 
     void OnTriggerEnter2D(Collider2D other) {
-
-        Debug.Log("Collision Detected");
         
         if (other.gameObject.name == "Killbox") {
-            /*
-            jumpScript = GetComponent<Jump>();
-            //pil = GetComponent<>
 
-            pil = jumpScript.sikte;
-            //Destroy
-            */
+            Destroy(pil);
             Destroy(this.gameObject);
+
         }
     }
 }

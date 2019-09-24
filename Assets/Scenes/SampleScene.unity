@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96058714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4, y: -1.46, z: 0}
+  m_LocalPosition: {x: 2.46, y: -1.99, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 994799460}
@@ -415,7 +415,7 @@ MonoBehaviour:
   sikte: {fileID: 1611301088}
   jumpSpeed: 8500
   raycastStartOffset: 0.55
-  raycastLength: 0.3
+  raycastLength: 0.2
   scootchForce: 1000
 --- !u!114 &96058720
 MonoBehaviour:
@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec4a9f806fc7884abccbc3340065d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pil: {fileID: 1611301088}
 --- !u!1 &139407406
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +503,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 625f105d7ed6eea4f84a7a2958cac7ab, type: 3}
   m_Name: 
@@ -2660,7 +2661,7 @@ MonoBehaviour:
   sikte: {fileID: 1453853207}
   jumpSpeed: 8500
   raycastStartOffset: 0.55
-  raycastLength: 0.3
+  raycastLength: 0.2
   scootchForce: 1000
 --- !u!50 &1069486360
 Rigidbody2D:
@@ -2774,6 +2775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec4a9f806fc7884abccbc3340065d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pil: {fileID: 1453853207}
 --- !u!1 &1187862050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4728,6 +4730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec4a9f806fc7884abccbc3340065d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pil: {fileID: 1840512351}
 --- !u!114 &2093201018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4744,7 +4747,7 @@ MonoBehaviour:
   sikte: {fileID: 1840512351}
   jumpSpeed: 8500
   raycastStartOffset: 0.55
-  raycastLength: 0.3
+  raycastLength: 0.2
   scootchForce: 1000
 --- !u!50 &2093201019
 Rigidbody2D:
@@ -4883,7 +4886,7 @@ MonoBehaviour:
   sikte: {fileID: 1959308856}
   jumpSpeed: 8500
   raycastStartOffset: 0.55
-  raycastLength: 0.3
+  raycastLength: 0.2
   scootchForce: 1000
 --- !u!50 &2127569675
 Rigidbody2D:
@@ -4997,3 +5000,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec4a9f806fc7884abccbc3340065d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pil: {fileID: 1959308856}
