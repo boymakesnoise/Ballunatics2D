@@ -17,8 +17,9 @@ public class GameOver : MonoBehaviour
     }
 
     private void Update() {
-        if (gameOver && Input.GetKeyDown(KeyCode.Space)) {
-            SceneManager.LoadScene("SampleScene");
+        //if (gameOver && Input.GetKeyDown(KeyCode.Space)) {
+        if (gameOver && Input.GetButtonDown("Submit")) {
+                SceneManager.LoadScene("Level");
         }
     }
 
