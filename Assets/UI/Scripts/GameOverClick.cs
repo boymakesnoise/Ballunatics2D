@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Click : MonoBehaviour
+public class GameOverClick : MonoBehaviour
 {
-    public void Play() {
+
+    public void Replay() {
         SceneManager.LoadScene("Level");
     }
 
-    public void Quit() {
-        Application.Quit();
+    public void MainMenu() {
+        SceneManager.LoadScene("MainMenu");
     }
+
 }
