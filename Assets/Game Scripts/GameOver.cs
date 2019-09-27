@@ -3,34 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverScreen;
     public Button selectButton;
+    public EventSystem es;
 
     private int playersLeft = 0;
     private CameraMovement cameraMovement;
-    //private bool gameOver = false;
+    private GameObject storeSelected;
 
     private void Start() {
         gameOverScreen.SetActive(false);
         cameraMovement = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
+
+        storeSelected = es.firstSelectedGameObject;
     }
-    /*
+
     private void Update() {
-        //if (gameOver && Input.GetKeyDown(KeyCode.Space)) {
-        if (gameOver && Input.GetButtonDown("Submit")) {
-                SceneManager.LoadScene("Level");
+
+        // ej tappa fokus vid musklick
+        if (es.currentSelectedGameObject != storeSelected) {
+            if (es.currentSelectedGameObject == null) {
+                es.SetSelectedGameObject(storeSelected);
+            } else {
+                storeSelected = es.currentSelectedGameObject;
+            }
         }
     }
-    */
+
     public void playerHasDied() {
 
         playersLeft--;
 
         if (playersLeft == 0) {
-            //gameOver = true;
             gameOverScreen.SetActive(true);
             cameraMovement.enabled = false;
             selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp

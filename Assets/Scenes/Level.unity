@@ -3265,6 +3265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1673331197}
   selectButton: {fileID: 1660762545}
+  es: {fileID: 230055103}
 --- !u!1 &1610642910
 GameObject:
   m_ObjectHideFlags: 0
