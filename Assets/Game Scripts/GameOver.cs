@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour
     private GameObject storeSelected;
 
     private void Start() {
-        gameOverScreen.SetActive(false);
+        gameOverScreen.SetActive(false);    // Om man glömt stänga av den
         cameraMovement = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
 
         storeSelected = es.firstSelectedGameObject;

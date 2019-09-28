@@ -1,14 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
-
     public GameObject pauseMenuUI;
+    public Button selectButton;
+    public EventSystem es;
 
-    // Update is called once per frame
+    private GameObject storeSelected;
+
+    private void Start() {
+        pauseMenuUI.SetActive(false);    // Om man glömt stänga av den
+        selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp
+
+        storeSelected = es.firstSelectedGameObject;
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Pause")) {
@@ -16,6 +27,15 @@ public class PauseMenu : MonoBehaviour
                 Resume();
             } else {
                 Pause();
+            }
+        }
+
+        // ej tappa fokus vid musklick
+        if (es.currentSelectedGameObject != storeSelected) {
+            if (es.currentSelectedGameObject == null) {
+                es.SetSelectedGameObject(storeSelected);
+            } else {
+                storeSelected = es.currentSelectedGameObject;
             }
         }
     }
