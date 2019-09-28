@@ -10,7 +10,6 @@ public class PauseMenuClick : MonoBehaviour
     }
 
     public void Restart() {
-
         SceneManager.LoadScene("Level");
     }
 

@@ -3,35 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+//using UnityEngine.EventSystems;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject gameOverScreen;
+    public GameObject gameOverMenu;
     public Button selectButton;
-    public EventSystem es;
+    public GameObject gameOverText;
+    public static bool gameIsOver = false;
 
     private int playersLeft = 0;
     private CameraMovement cameraMovement;
-    private GameObject storeSelected;
 
     private void Start() {
-        gameOverScreen.SetActive(false);    // Om man glömt stänga av den
+        gameOverMenu.SetActive(false);    // Om man glömt stänga av den
+        gameOverText.SetActive(false);
         cameraMovement = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
-
-        storeSelected = es.firstSelectedGameObject;
-    }
-
-    private void Update() {
-
-        // ej tappa fokus vid musklick
-        if (es.currentSelectedGameObject != storeSelected) {
-            if (es.currentSelectedGameObject == null) {
-                es.SetSelectedGameObject(storeSelected);
-            } else {
-                storeSelected = es.currentSelectedGameObject;
-            }
-        }
     }
 
     public void playerHasDied() {
@@ -39,9 +26,11 @@ public class GameOver : MonoBehaviour
         playersLeft--;
 
         if (playersLeft == 0) {
-            gameOverScreen.SetActive(true);
+            gameOverMenu.SetActive(true);
+            gameOverText.SetActive(true);
             cameraMovement.enabled = false;
             selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp
+            gameIsOver = true;
         }
     }
 
@@ -49,4 +38,17 @@ public class GameOver : MonoBehaviour
         playersLeft++;
     }
 
+    /*
+    public void Replay() {
+        gameIsOver = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level");
+    }
+
+    public void MainMenu() {
+        gameIsOver = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+    */
 }
