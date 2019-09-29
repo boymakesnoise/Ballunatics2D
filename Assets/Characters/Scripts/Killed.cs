@@ -5,7 +5,7 @@ using UnityEngine;
 public class Killed : MonoBehaviour
 {
     public GameObject pil;
-    public GameOver deathController;
+    public CountRemainingPlayers deathController;
 
     private void Start() {
         deathController.playerHasAppeared();

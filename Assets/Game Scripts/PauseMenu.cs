@@ -15,11 +15,11 @@ public class PauseMenu : MonoBehaviour
     private void Start() {
         pauseMenu.SetActive(false);    // Om man glömt stänga av den
         pauseText.SetActive(false);
+        Time.timeScale = 1f;
     }
 
-    void Update()
-    {
-        if (Input.GetButtonDown("Pause") && !GameOver.gameIsOver) {
+    void Update() {
+        if (Input.GetButtonDown("Pause") && !CountRemainingPlayers.gameIsOver) {
             if (gameIsPaused) {
                 Resume();
             } else {
@@ -33,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         pauseText.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        CameraMovement.moveCamera = true;
     }
 
     public void Pause() {
@@ -40,10 +41,8 @@ public class PauseMenu : MonoBehaviour
         pauseText.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        CameraMovement.moveCamera = false;
         selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp
     }
-    
-
-
     
 }
