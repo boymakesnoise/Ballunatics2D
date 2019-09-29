@@ -8,6 +8,7 @@ public class CountRemainingPlayers : MonoBehaviour
     public static int playersLeft = 0;
 
     private void Awake() {
+        gameIsOver = false;
         playersLeft = 0;
     }
 
@@ -25,6 +26,6 @@ public class CountRemainingPlayers : MonoBehaviour
     }
 
     private void Update() {
-        
+        print(gameIsOver);
     }
 }

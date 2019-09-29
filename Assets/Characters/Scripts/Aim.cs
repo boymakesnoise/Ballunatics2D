@@ -27,9 +27,12 @@ public class Aim : MonoBehaviour
         var v = Input.GetAxis(yAim);
 
         renderer.enabled = false;
-        if (h > 0.3 || h < -0.3 || v > 0.3 || v < -0.3) {
-            renderer.enabled = true;
+        if (!PauseMenu.gameIsPaused && !CountRemainingPlayers.gameIsOver) {
+            if (h > 0.5 || h < -0.5 || v > 0.5 || v < -0.5) {
+                renderer.enabled = true;
+            }
         }
+        
         
 
         if (Mathf.Abs(h) > 0.05 || Mathf.Abs(v) > 0.05) {

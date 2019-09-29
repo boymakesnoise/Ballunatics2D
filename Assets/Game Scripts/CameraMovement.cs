@@ -18,6 +18,6 @@ public class CameraMovement : MonoBehaviour
                 transform.position += new Vector3(0f, cameraSpeed, 0f);
         }
 
-        print(moveCamera);
+        //print(moveCamera);
     }
 }
