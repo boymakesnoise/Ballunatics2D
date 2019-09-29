@@ -47,6 +47,7 @@ public class Winner : MonoBehaviour
             Time.timeScale = 0f;
             //PauseMenu.gameIsPaused = true;
             CameraMovement.moveCamera = false;
+            CountRemainingPlayers.gameIsOver = true;
             if (canSelect) {
                 canSelect = false;
                 selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp
@@ -81,6 +82,7 @@ public class Winner : MonoBehaviour
         Time.timeScale = 0f;
         //PauseMenu.gameIsPaused = true;
         CameraMovement.moveCamera = false;
+        CountRemainingPlayers.gameIsOver = true;
         selectButton.OnSelect(null);    // Påminn Unity att markera denna knapp
     }
 }

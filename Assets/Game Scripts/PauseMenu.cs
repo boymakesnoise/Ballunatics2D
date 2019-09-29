@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     void Update() {
+        //if (Input.GetButtonDown("Pause") && !CountRemainingPlayers.gameIsOver) {
         if (Input.GetButtonDown("Pause") && !CountRemainingPlayers.gameIsOver) {
             if (gameIsPaused) {
                 Resume();
