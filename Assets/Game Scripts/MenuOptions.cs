@@ -22,6 +22,9 @@ public class MenuOptions : MonoBehaviour
                 storeSelected = es.currentSelectedGameObject;
             }
         }
+        //if (GameObject.Find("DontDestroy")) {
+        //    print("hittad!!!!!");
+        //}
     }
 
     public void Restart() {
@@ -37,6 +40,8 @@ public class MenuOptions : MonoBehaviour
         PauseMenu.gameIsPaused = false;
         CameraMovement.moveCamera = true;
         CountRemainingPlayers.gameIsOver = false;
+        PlayerArray.activePlayers.Clear();          // Töm listan på spelare
+        Destroy(GameObject.Find("DontDestroy"));    // Förstör objektet som har listan på sig
         SceneManager.LoadScene("MainMenu");
     }
 }

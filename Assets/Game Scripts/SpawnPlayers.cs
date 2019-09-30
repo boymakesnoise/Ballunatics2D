@@ -20,7 +20,6 @@ public class SpawnPlayers : MonoBehaviour
         if (PlayerArray.activePlayers.Contains(1)) {
             player1.SetActive(true);
             sikte1.SetActive(true);
-            //CountRemainingPlayers.deathController.playerHasAppeared();
         }
         if (PlayerArray.activePlayers.Contains(2)) {
             player2.SetActive(true);

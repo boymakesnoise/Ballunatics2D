@@ -24,7 +24,7 @@ public class MainMenuClick : MonoBehaviour
     }
 
     public void Play() {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Lobby");
     }
 
     public void Quit() {
