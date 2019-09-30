@@ -17,6 +17,8 @@ public class Killed : MonoBehaviour
 
             deathController.playerHasDied();
 
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+
             Destroy(pil);
             Destroy(this.gameObject);
 

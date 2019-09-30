@@ -52,6 +52,8 @@ public class Jump : MonoBehaviour
                 }
 
                 m_Rigidbody.AddForce(m_NewForce * jumpSpeed, ForceMode2D.Impulse);
+
+                FindObjectOfType<AudioManager>().Play("Jump");
             }
         }
 
