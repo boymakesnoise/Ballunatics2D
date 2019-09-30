@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerSelect : MonoBehaviour
 {
@@ -15,21 +16,28 @@ public class PlayerSelect : MonoBehaviour
     private void Start()
     {
         selectButton = "P" + playerNumber + "jump";
-        //image = GetComponent<Image>();
     }
 
     private void Update()
     {
         if (Input.GetAxisRaw(selectButton) >= 0.5f && canSelect) {
             canSelect = false;
-            // alpha = 1
+
+            // set alpha = 1
             var tempColor = image.color;
-            tempColor.a = 1f; //1f makes it fully visible, 0f makes it fully transparent.
+            tempColor.a = 1f;
             image.color = tempColor;
+
+            // lägg till spelarnumret i listan
+            PlayerArray.activePlayers.Add(playerNumber); 
         }
 
         if (Input.GetAxisRaw(selectButton) < 0.5f) {
             canSelect = true;
+        }
+
+        if (Input.GetButtonDown("Submit") && PlayerArray.activePlayers.Count > 1) {
+            SceneManager.LoadScene("Level");
         }
         
     }

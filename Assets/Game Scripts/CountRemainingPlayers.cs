@@ -26,6 +26,7 @@ public class CountRemainingPlayers : MonoBehaviour
     }
 
     private void Update() {
-        print(gameIsOver);
+        //print(gameIsOver);
+        //print(playersLeft);
     }
 }

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 40625024}
   - component: {fileID: 40625023}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: P4 text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 273138527}
   - component: {fileID: 273138529}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1 image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 345397462}
   - component: {fileID: 345397464}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: P2 image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 428166187}
   - component: {fileID: 428166186}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Press A text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 467208310}
   - component: {fileID: 467208312}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: P3 image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 497463034}
   - component: {fileID: 497463033}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: P1 text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ GameObject:
   - component: {fileID: 927766786}
   - component: {fileID: 927766788}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: P4 image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 1463724095}
   - component: {fileID: 1463724094}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: P2 text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 1618598324}
   - component: {fileID: 1618598323}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: P3 text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1531,6 +1531,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618598321}
   m_CullTransparentMesh: 0
+--- !u!1 &1802718030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1802718032}
+  - component: {fileID: 1802718031}
+  m_Layer: 0
+  m_Name: DontDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1802718031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802718030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ce034ec8637734291cbbc19613361c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1802718032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802718030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 195.5, y: 110, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008281678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1586,7 @@ GameObject:
   - component: {fileID: 2008281681}
   - component: {fileID: 2008281680}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Press RT text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
