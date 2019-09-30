@@ -11,6 +11,8 @@ public class MainMenuClick : MonoBehaviour
 
     private void Start() {
         storeSelected = es.firstSelectedGameObject;
+
+        FindObjectOfType<AudioManager>().Play("Music");
     }
 
     private void Update() {

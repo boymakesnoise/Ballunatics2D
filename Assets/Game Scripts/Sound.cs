@@ -10,8 +10,11 @@ public class Sound {
 
     [Range(0f, 1f)]
     public float volume;
-    //[Range(.1f, 3f)]
+    //[Range(.1f, 2f)]
     //public float pitch;
+    [Range(0f, 1f)]
+    public float pitchRandomization;
+    public bool loop;
 
     [HideInInspector]
     public AudioSource source;

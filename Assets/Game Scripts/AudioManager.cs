@@ -4,24 +4,49 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 
-    [Range(0f, 1f)]
-    public float pitchRandomization;
     public Sound[] sounds;
 
-    void Awake()
-    {
+    public static AudioManager instance;
+
+    void Awake() {
+
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         foreach (Sound s in sounds) {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.volume = s.volume;
-            //s.source.pitch = s.pitch;
+            s.source.pitch = 1;
+            s.source.loop = s.loop;
         }
     }
 
     public void Play (string name) {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.pitch = 1 + UnityEngine.Random.Range(-pitchRandomization, pitchRandomization);
+        if (s == null) {
+            Debug.LogWarning("Ljudet: " + name + " hittades inte!");
+            return;
+        }
+        //s.source.pitch += UnityEngine.Random.Range(-s.pitchRandomization, s.pitchRandomization);
+        s.source.pitch = 1 + UnityEngine.Random.Range(-s.pitchRandomization, s.pitchRandomization);
         s.source.Play();
+        //s.source.pitch = 1;   // Sätter tillbaka pitch till 1
+    }
+
+    public void Stop (string name) {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null) {
+            Debug.LogWarning("Ljudet: " + name + " hittades inte!");
+            return;
+        }
+        s.source.Stop();
     }
 
 }
