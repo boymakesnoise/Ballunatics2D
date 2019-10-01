@@ -32,6 +32,9 @@ public class MenuOptions : MonoBehaviour
         PauseMenu.gameIsPaused = false;
         CameraMovement.moveCamera = true;
         CountRemainingPlayers.gameIsOver = false;
+        FindObjectOfType<AudioManager>().Stop("AmbienceBirds");
+        FindObjectOfType<AudioManager>().Stop("AmbienceWind");
+        FindObjectOfType<AudioManager>().Stop("AmbienceSpace");
         SceneManager.LoadScene("Level");
     }
 
@@ -40,6 +43,9 @@ public class MenuOptions : MonoBehaviour
         PauseMenu.gameIsPaused = false;
         CameraMovement.moveCamera = true;
         CountRemainingPlayers.gameIsOver = false;
+        FindObjectOfType<AudioManager>().Stop("AmbienceBirds");
+        FindObjectOfType<AudioManager>().Stop("AmbienceWind");
+        FindObjectOfType<AudioManager>().Stop("AmbienceSpace");
         PlayerArray.activePlayers.Clear();          // Töm listan på spelare
         Destroy(GameObject.Find("DontDestroy"));    // Förstör objektet som har listan på sig
         SceneManager.LoadScene("MainMenu");

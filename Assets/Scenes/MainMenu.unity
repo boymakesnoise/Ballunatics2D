@@ -1061,13 +1061,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: AmbienceWind
     clip: {fileID: 8300000, guid: 23d0852135e8f5d47b02f7d5931e7afb, type: 3}
-    volume: 0.179
+    volume: 0.096
     pitchRandomization: 0
     loop: 1
     source: {fileID: 0}
   - name: AmbienceSpace
     clip: {fileID: 8300000, guid: a8e6deb94dd1a4a4e91bfeefa16c2309, type: 3}
-    volume: 0.179
+    volume: 0.201
     pitchRandomization: 0
     loop: 1
     source: {fileID: 0}

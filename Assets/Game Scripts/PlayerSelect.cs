@@ -38,7 +38,7 @@ public class PlayerSelect : MonoBehaviour
 
         if (Input.GetButtonDown("Submit") && PlayerArray.activePlayers.Count > 1) {
             FindObjectOfType<AudioManager>().Stop("Music");
-            FindObjectOfType<AudioManager>().Play("AmbienceBirds");
+            //FindObjectOfType<AudioManager>().Play("AmbienceBirds");
             SceneManager.LoadScene("Level");
         }
         
