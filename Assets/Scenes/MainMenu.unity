@@ -1053,6 +1053,12 @@ MonoBehaviour:
     pitchRandomization: 0.289
     loop: 0
     source: {fileID: 0}
+  - name: AmbienceBirds
+    clip: {fileID: 8300000, guid: 1fef0e5d42365ab4bbcf420659a1aa48, type: 3}
+    volume: 0.179
+    pitchRandomization: 0
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &1233621930
 Transform:
   m_ObjectHideFlags: 0
