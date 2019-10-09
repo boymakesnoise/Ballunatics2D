@@ -1041,7 +1041,7 @@ MonoBehaviour:
     pitchRandomization: 0
     loop: 1
     source: {fileID: 0}
-  - name: Jump
+  - name: JumpP1
     clip: {fileID: 8300000, guid: a7ac230837baa614e88d923ebabe01a1, type: 3}
     volume: 0.507
     pitchRandomization: 0.207
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 828f162d06184d24b9bb1bbf1f1209ed, type: 3}
-    volume: 0.688
+    volume: 0.74
     pitchRandomization: 0.289
     loop: 0
     source: {fileID: 0}
@@ -1070,6 +1070,24 @@ MonoBehaviour:
     volume: 0.201
     pitchRandomization: 0
     loop: 1
+    source: {fileID: 0}
+  - name: JumpP2
+    clip: {fileID: 8300000, guid: 516b412581695de40a4494f2bc8e1d3e, type: 3}
+    volume: 0.553
+    pitchRandomization: 0.194
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpP3
+    clip: {fileID: 8300000, guid: b0fe8e5b082cc96469bcc41ad7f99b8b, type: 3}
+    volume: 0.4
+    pitchRandomization: 0.194
+    loop: 0
+    source: {fileID: 0}
+  - name: JumpP4
+    clip: {fileID: 8300000, guid: da406f7733c148e459de83f4e1974ab3, type: 3}
+    volume: 0.486
+    pitchRandomization: 0.194
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1233621930
 Transform:

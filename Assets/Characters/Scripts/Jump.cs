@@ -21,6 +21,7 @@ public class Jump : MonoBehaviour
 
     private int jumps = 0;
     private bool canLand = true;
+    private string jumpingPlayer;
 
     private void Awake() {
         xAim = "P" + playerNumber + "xAim";
@@ -53,7 +54,8 @@ public class Jump : MonoBehaviour
 
                 m_Rigidbody.AddForce(m_NewForce * jumpSpeed, ForceMode2D.Impulse);
 
-                FindObjectOfType<AudioManager>().Play("Jump");
+                jumpingPlayer = "JumpP" + playerNumber;
+                FindObjectOfType<AudioManager>().Play(jumpingPlayer);
             }
         }
 
