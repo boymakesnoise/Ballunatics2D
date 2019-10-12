@@ -1943,7 +1943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &96058715
 Rigidbody2D:
   serializedVersion: 4
@@ -1980,7 +1980,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.88
 --- !u!212 &96058717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2019,7 +2019,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67ac139959833014a9d6df6ebb30caef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 116eea4a336c96c46b37a47f0cb08758, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2039,7 +2039,7 @@ Transform:
   m_GameObject: {fileID: 96058714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.51, y: -0.86, z: -3.11}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -16651,7 +16651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1069486359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16706,7 +16706,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.88
 --- !u!212 &1069486362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16745,7 +16745,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e326f14856adf4c44bd6a1e6cc98e887, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cba5ecdcabfcc3e4d8cad23966422281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16765,7 +16765,7 @@ Transform:
   m_GameObject: {fileID: 1069486358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.9400005, y: -0.37, z: -3.11}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -37258,7 +37258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2093201016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37327,7 +37327,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.88
 --- !u!212 &2093201021
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37366,7 +37366,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 987a3f945d5819b48b57c4376dbd5694, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 589da1f274945c64fa0973ea77e7b324, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37385,8 +37385,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093201015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5800004, y: -0.37, z: -3.11}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 3.81, y: -0.86, z: -3.11}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -38064,7 +38064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2127569674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38119,7 +38119,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.88
 --- !u!212 &2127569677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38158,7 +38158,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8bf6b0c1dcaf6b346887d188a856b83f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f03193c338e01a468ee17404d0f62fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -38178,7 +38178,7 @@ Transform:
   m_GameObject: {fileID: 2127569673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.76, y: -0.37, z: -3.11}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
