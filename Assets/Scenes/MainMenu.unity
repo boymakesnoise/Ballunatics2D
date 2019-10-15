@@ -1124,7 +1124,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 828f162d06184d24b9bb1bbf1f1209ed, type: 3}
-    volume: 0.74
+    volume: 0.85
     pitchRandomization: 0.289
     loop: 0
     source: {fileID: 0}
@@ -1154,14 +1154,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: JumpP3
     clip: {fileID: 8300000, guid: b0fe8e5b082cc96469bcc41ad7f99b8b, type: 3}
-    volume: 0.4
+    volume: 0.33
     pitchRandomization: 0.15
     loop: 0
     source: {fileID: 0}
   - name: JumpP4
-    clip: {fileID: 8300000, guid: da406f7733c148e459de83f4e1974ab3, type: 3}
-    volume: 0.486
-    pitchRandomization: 0.1
+    clip: {fileID: 8300000, guid: d3a777375fd36a64ea8358b080f12ed6, type: 3}
+    volume: 0.33
+    pitchRandomization: 0.15
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1233621930
