@@ -10,6 +10,7 @@ public class Jump : MonoBehaviour
     public float raycastStartOffset = 0.55f;
     public float raycastLength = 0.2f;
     public float scootchForce;
+    public bool showNoJumpsLeft;
 
     private string jumpButton;
     private float distToGround;
@@ -22,6 +23,8 @@ public class Jump : MonoBehaviour
     private int jumps = 0;
     private bool canLand = true;
     private string jumpingPlayer;
+
+    SpriteRenderer m_SpriteRenderer;
 
     private void Awake() {
         xAim = "P" + playerNumber + "xAim";
@@ -36,6 +39,8 @@ public class Jump : MonoBehaviour
         distToGround = m_Collider.bounds.extents.y;
 
         jumpButton = "P" + playerNumber + "jump";
+
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update() {
@@ -75,6 +80,14 @@ public class Jump : MonoBehaviour
         if (IsGrounded() && canLand) {
             canLand = false;
             jumps = 1;
+        }
+
+        if (jumps == 0 && showNoJumpsLeft) {
+            Color col = new Color(0.7f, 0.7f, 0.7f);
+            m_SpriteRenderer.color = col;
+        } else {
+            m_SpriteRenderer.color = Color.white;
+
         }
     }
 
