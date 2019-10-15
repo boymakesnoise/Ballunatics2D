@@ -941,7 +941,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: c1cee8d904360fa43814687a09668f8e, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 7a4fa75068eed654f9310048d4c5aa01, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -987,7 +987,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a8e3d3d56e15651449bd62a4a7055af6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f10e741869626394da66f818e912d449, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: fe4a138d869bdb340b37c361a3d3e727, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 2ed5a90d5f6dc2d45a5e10d58890409a, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1293,7 +1293,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 67f635ecafe4fb44c9fea6e4559c3e26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c258b71f58cf0ee479c0e91d31fdd020, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
