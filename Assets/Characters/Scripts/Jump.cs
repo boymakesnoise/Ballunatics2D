@@ -43,7 +43,7 @@ public class Jump : MonoBehaviour
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
 
         // Jump
         if (Input.GetAxisRaw(jumpButton) >= 0.5f && canJump) {
@@ -64,17 +64,21 @@ public class Jump : MonoBehaviour
             }
         }
 
+        // Scootching
+        if (IsGrounded()) {
+            var h = Input.GetAxis(xAim);
+            m_Rigidbody.AddForce(new Vector2(h * scootchForce, 0));
+        }
+
+    }
+
+    private void Update() {
+
         Debug.DrawRay(transform.position + new Vector3(0, -raycastStartOffset, 0), -Vector2.up * raycastLength, Color.yellow);
         //Debug.Log(jumps);
 
         if (Input.GetAxisRaw(jumpButton) < 0.5f) {
             canJump = true;
-        }
-
-        // Scootching
-        if (IsGrounded()) {
-            var h = Input.GetAxis(xAim);
-            m_Rigidbody.AddForce(new Vector2(h * scootchForce, 0));
         }
 
         if (IsGrounded() && canLand) {
