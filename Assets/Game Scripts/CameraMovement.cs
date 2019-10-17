@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     public static bool moveCamera = false;
 
     private void Start() {
-        //moveCamera = true;
+        moveCamera = false;
         Invoke("StartMovingCamera", 3f);
     }
 
