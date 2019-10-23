@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     {
 
         if (moveCamera) {
-                transform.position += new Vector3(0f, cameraSpeed, 0f);
+                transform.position += new Vector3(0f, cameraSpeed, 0f) * Time.deltaTime;
         }
 
         //print(moveCamera);
