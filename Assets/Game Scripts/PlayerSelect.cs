@@ -36,7 +36,7 @@ public class PlayerSelect : MonoBehaviour
             canSelect = true;
         }
 
-        if (Input.GetButtonDown("Submit") && PlayerArray.activePlayers.Count > 1) {
+        if (Input.GetButtonDown("Submit") && PlayerArray.activePlayers.Count > 0) {     // used to be Count > 1 (for a min. of 2 players)
             FindObjectOfType<AudioManager>().Stop("Music");
             //FindObjectOfType<AudioManager>().Play("AmbienceBirds");
             SceneManager.LoadScene("Level");

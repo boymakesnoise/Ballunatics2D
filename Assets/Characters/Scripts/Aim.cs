@@ -10,7 +10,7 @@ public class Aim : MonoBehaviour
 
     private string xAim;
     private string yAim;
-    private SpriteRenderer renderer;
+    private SpriteRenderer rend;
 
     private void Awake() {
         xAim = "P" + playerNumber + "xAim";
@@ -18,7 +18,7 @@ public class Aim : MonoBehaviour
     }
 
     private void Start() {
-        renderer = GetComponent<SpriteRenderer>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     void Update() {
@@ -26,10 +26,10 @@ public class Aim : MonoBehaviour
         var h = Input.GetAxis(xAim);
         var v = Input.GetAxis(yAim);
 
-        renderer.enabled = false;
+        rend.enabled = false;
         if (!PauseMenu.gameIsPaused && !CountRemainingPlayers.gameIsOver) {
             if (h > 0.5 || h < -0.5 || v > 0.5 || v < -0.5) {
-                renderer.enabled = true;
+                rend.enabled = true;
             }
         }
         
